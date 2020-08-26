@@ -1,0 +1,233 @@
+
+body{
+  background-color: black !important;
+}
+
+.container_p{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 10px;
+    left: 25%;
+}
+
+.videoContainer {
+		position: relative;
+		width: 200px;
+		height: 150px;
+	}
+
+	.videoContainer video {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	.volume_bar {
+		position: absolute;
+		width: 5px;
+		height: 0px;
+		right: 0px;
+		bottom: 0px;
+		background-color: #12acef;
+	}
+
+	#localScreenContainer {
+		display: none;
+    }
+    
+    video {
+        background-color: #ddd;
+        border-radius: 7px;
+        margin: 10px 0px 0px 10px;
+        width: 320px;
+        height: 240px;
+    }
+
+    #title{
+        font-family: none;
+        text-align: center;
+        font-size: 70px;
+    }
+
+    .area {
+        text-align: center;
+        font-size: 6.5em;
+        color: #fff;
+        letter-spacing: -7px;
+        font-weight: 700;
+        text-transform: uppercase;
+        animation: blur 1.75s ease-out infinite;
+        text-shadow: 0px 0px 2px grey, 0px 0px 5px grey;
+    }
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+  }
+}
+
+.screenShareButton{
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background: white;
+  margin: 30px auto 0;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  transition: .3s;
+  font-family: fantasy;
+  color: grey;
+  text-align: center;
+  font-size: 30px;
+}
+
+.screenShareButton:hover{
+  box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
+  transform: scale(1.05,1.05);
+}
+
+#subTitle{
+  color: white;
+}
+
+.earth {
+  background: url(https://climate.nasa.gov/system/resources/detail_files/41_StingofClimateChange_detail_768x432.jpg);
+  width: 432px; /*img height is 432px*/
+  height: 432px; /*img height*/
+  border-radius: 50%;
+  animation: earth 10s infinite linear forwards;
+  box-shadow: 0.7px 0.7px 7px rgb(255, 255, 255);
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+@keyframes earth {
+  0% {
+    background-position: left top;
+  }
+
+  100% {
+    background-position: 768px top; /*img width is 768px*/
+  }
+}
+
+.cod_session{
+  font-family: inherit;
+  width: 50%;
+  border: 0;
+  border-bottom: 2px solid white;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.cod_session:focus{
+  border-bottom: 2px solid green;
+}
+
+.btn-create{
+    float: right;
+    background: transparent;
+    border: 1px solid white;
+    width: 200px;
+    line-height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition:300ms;  
+}
+
+.btn-create span{
+    z-index: 93;
+    position: relative;
+}
+.btn-create:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:-105%;
+    transition:300ms;
+    background: rgba(255,255,255,0.52);
+    transform:skew(-30deg);
+}
+.btn-create:hover:before{
+    left: 105%;
+    
+}
+.btn-create:hover{
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+  cursor:pointer;
+}
+
+.transform{
+    color: white;
+    transform: rotate(-34deg);
+    position: absolute;
+    left: 79px;
+    top: 361px;
+}
+
+#localVideo{
+  // margin-top: 223px;
+  // position: absolute;
+  // left: 0;
+  // top: 100vh;
+  width: 200px;
+}
+
+#remoteVideo{
+    // margin-top: -237px;
+    // margin-left: 775px;
+    // position: absolute;
+    // right: 0;
+    // top: 100vh;
+    width: 200px;
+}
+
+.loading {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative; }
+
+.loading svg {
+  width: 100%;
+  height: 100%;
+}
+
+.loading #pulsar{
+  stroke-dasharray:281;
+  animation: dash 2.5s infinite linear forwards;
+}
+
+/*Animation*/
+@keyframes dash{ from{stroke-dashoffset:814;} to {stroke-dashoffset:-814;}};
+
+
